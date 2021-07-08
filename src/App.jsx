@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import habit from './components/habit';
+import Habits from './components/Habits';
 import React, { Component } from 'react';
 
 
 function App() {
   return (
-    <habit/>    
+    <Habits/>    
     
   );
 }

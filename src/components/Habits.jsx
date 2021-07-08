@@ -9,11 +9,25 @@ class Habits extends Component {
             { id= 3 , name: 'coding', count: 0},
         ],
     };
+    handelInclement = habit => {
+        console.log(`handleInclement ${habit}`)
+    }
+    handelDecrement = habit => {
+        console.log(`handleDecrement ${habit}`)
+    }
+    handleDelete = habit => {
+        console.log(`handleDelete ${habit}`)
+
+    }
     render() {
         return (
             <ul>
                 {this.state.habits.map(habit =>(
-                    <Habit key={habit.id} habit={habit} />
+                    <Habit key={habit.id} 
+                    habit={habit} 
+                    onInclement={this.handelInclement}
+                    onDeclement={this.handelDecrement}
+                    onDelete={this.handleDelete}/>
 
                 ))}
             </ul>
