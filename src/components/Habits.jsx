@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Habit from './Habit';
+import HabitAddForm from './HabitAddForm';
+
 
 class Habits extends Component {
     
@@ -19,6 +21,7 @@ class Habits extends Component {
     render() {
         return (
             <>
+            
             <HabitAddForm onAdd = {this.hadleAdd}/>
             <ul>
                 {this.props.habits.map(habit =>(
@@ -30,6 +33,7 @@ class Habits extends Component {
 
                 ))}
             </ul>
+            <button className="habits-reset" onClick={this.onReset}>reset</button>
             </>
         );
     }
