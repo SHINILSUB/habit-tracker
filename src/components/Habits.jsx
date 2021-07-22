@@ -13,8 +13,13 @@ class Habits extends Component {
         this.props.onDelete(habit)
 
     };
+    hadleAdd = name => {
+        this.props.onAdd(name)
+    }
     render() {
         return (
+            <>
+            <HabitAddForm onAdd = {this.hadleAdd}/>
             <ul>
                 {this.props.habits.map(habit =>(
                     <Habit key={habit.id} 
@@ -25,6 +30,7 @@ class Habits extends Component {
 
                 ))}
             </ul>
+            </>
         );
     }
 }
