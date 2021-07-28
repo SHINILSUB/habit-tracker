@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-class Habit extends Component {
+class Habit extends PureComponent {
   handelInclement = () => {
     this.props.onInclement(this.props.habit);
   };
@@ -12,7 +12,8 @@ class Habit extends Component {
   };
 
   render() {
-    const { name, count } = this.props.habit;
+    const { name } = this.props.habit;
+    const {count} = this.props;
     return (
       <li className="habit">
         <span className="habit-name">{name}</span>
